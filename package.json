@@ -13,7 +13,8 @@
     "flowbite": "^2.4.1",
     "nuxt": "^3.12.2",
     "swiper": "^11.1.4",
-    "vue": "latest"
+    "vue": "latest",
+    "vue3-marquee": "^4.2.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.0"

@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-6">
+  <div class="container mx-auto p-6 pt-10 pb-10">
     <div class="flex justify-between pb-4">
       <h2 class="text-2xl font-bold mb-6 text-center flex">Блог</h2>
 

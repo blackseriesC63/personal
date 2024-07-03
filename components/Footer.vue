@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-100 py-10">
     <div
-      class="container mx-auto flex flex-col justify-between md:flex-row items-center space-y-6 md:space-y-0"
+      class="container mx-auto flex justify-between flex-col md:flex-row items-center space-y-6 md:space-y-0"
     >
       <div class="flex flex-col items-center md:items-start">
         <img src="/images/logo.png" alt="Nornlight Logo" class="mb-4" />
@@ -72,9 +72,9 @@
 
       <!-- Links -->
       <div
-        class="flex flex-wrap justify-between text-center md:text-left md:space-x-10"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center md:text-left"
       >
-        <div class="flex flex-col space-y-2">
+        <div class="space-y-2">
           <h4 class="font-semibold">Покупателям</h4>
           <ul class="space-y-1">
             <li>
@@ -101,7 +101,7 @@
             </li>
           </ul>
         </div>
-        <div class="flex flex-col space-y-2">
+        <div class="space-y-2">
           <h4 class="font-semibold">Товары</h4>
           <ul class="space-y-1">
             <li>
@@ -130,10 +130,9 @@
             </li>
           </ul>
         </div>
-        <div>
-          <ul>
-            <h4 class="font-semibold">Споты</h4>
-
+        <div class="space-y-2">
+          <h4 class="font-semibold">Споты</h4>
+          <ul class="space-y-1">
             <li>
               <a href="#" class="text-gray-500 hover:text-gray-700"
                 >Трековые светильники</a
