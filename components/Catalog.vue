@@ -1,44 +1,80 @@
 <template>
   <div class="container mx-auto p-6">
     <!-- Catalog Header -->
-    <div class="mb-8 text-center">
-      <h1 class="text-3xl font-bold">Каталог</h1>
+    <div class="flex justify-between pb-4">
+      <h2 class="text-2xl font-bold mb-6 text-center flex">Каталог</h2>
+
+      <button
+        class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
+      >
+        Весь каталог
+        <svg
+          width="15"
+          height="12"
+          viewBox="0 0 15 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 6H14M14 6L9 11M14 6L9 1" stroke="#454545" />
+        </svg>
+      </button>
     </div>
 
     <!-- Catalog Items -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
       <div
         v-for="item in catalogItems"
         :key="item.title"
-        class="bg-gray-100 p-4 rounded-lg shadow flex justify-between"
+        class="bg-gray-100 p-4 rounded-lg shadow flex flex-col"
       >
-        <div class="flex flex-col justify-between p-2">
+        <div class="flex flex-col justify-between h-full p-2">
           <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
+          <div class="flex justify-end">
+            <img
+              :src="item.image"
+              :alt="item.title"
+              class="max-md:mx-auto max-md:w-3/3 object-cover rounded-md"
+            />
+          </div>
+
           <p class="text-gray-500">{{ item.price }}</p>
         </div>
-        <img
-          :src="item.image"
-          :alt="item.title"
-          class="h-40 object-cover mb-4 rounded-md"
-        />
       </div>
     </div>
 
     <!-- Why NORNLIGHT Section -->
     <div class="mt-16">
-      <h2 class="text-2xl font-bold mb-6 text-center flex">
-        Почему NORNLIGHT?
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="flex justify-between pb-4">
+        <h2 class="text-2xl font-bold mb-6 text-center flex">
+          Почему Nornlight?
+        </h2>
+
+        <button
+          class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
+        >
+          О компании
+          <svg
+            width="15"
+            height="12"
+            viewBox="0 0 15 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 6H14M14 6L9 11M14 6L9 1" stroke="#454545" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div
           v-for="benefit in benefits"
           :key="benefit.title"
           class="bg-white p-4 rounded-lg shadow text-center"
         >
           <div class="mb-4">
-            <img :src="benefit.imageSrc" alt="" class=" flex p-8" />
+            <img :src="benefit.imageSrc" alt="" class="flex p-8" />
           </div>
-          <div class=" py-5 p-5 text-start">
+          <div class="py-5 p-5 text-start">
             <h3 class="text-xl font-semibold mb-2">{{ benefit.title }}</h3>
             <p class="text-gray-500">{{ benefit.description }}</p>
           </div>
