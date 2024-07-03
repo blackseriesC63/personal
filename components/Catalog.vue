@@ -49,20 +49,21 @@
           Почему Nornlight?
         </h2>
 
-        <button
-          class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
-        >
-          О компании
-          <svg
-            width="15"
-            height="12"
-            viewBox="0 0 15 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <a href="/about"
+          ><button
+            class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
           >
-            <path d="M0 6H14M14 6L9 11M14 6L9 1" stroke="#454545" />
-          </svg>
-        </button>
+            О компании
+            <svg
+              width="15"
+              height="12"
+              viewBox="0 0 15 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 6H14M14 6L9 11M14 6L9 1" stroke="#454545" />
+            </svg></button
+        ></a>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">

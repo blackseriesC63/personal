@@ -1,14 +1,8 @@
 <template>
   <div>
-    <Slider />
-    <Catalog />
-    <Popular />
+    <About />
     <BrandSlider />
     <Blog />
-    <Manufacturing />
-    
-    <ModalCall />
-
   </div>
 </template>
 <script setup></script>

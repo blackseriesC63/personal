@@ -1,15 +1,12 @@
 <template>
-    <div>
-        <Navbar/>
+  <div>
+    <Navbar />
 
-        <slot />
-    </div>
+    <slot />
+    <Footer />
+  </div>
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>
-<style lang="scss" scoped>
-    
-</style>
+<style lang="scss" scoped></style>

@@ -1,26 +1,32 @@
 <template>
   <div>
     <!-- Navbar for Desktop View -->
-    <div class="container"></div>
     <nav
-      class="container mx-auto  justify-between items-center lg:flex space-x-6 pt-3 hidden lg:flex"
+      class="container mx-auto justify-between items-center lg:flex space-x-6 pt-3 hidden lg:flex"
     >
       <div class="gap-10 flex justify-between">
-        <a href="#" class="text-gray-600 hover:text-gray-900">О компании</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900"
+        <a href="/about" class="text-gray-600 hover:text-gray-900">О компании</a>
+        <a href="/shipping" class="text-gray-600 hover:text-gray-900"
           >Доставка и оплата</a
         >
-        <a href="#" class="text-gray-600 hover:text-gray-900">Возврат</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Гарантии</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Контакты</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Блог</a>
+        <a href="/return" class="text-gray-600 hover:text-gray-900">Возврат</a>
+        <a href="/garant" class="text-gray-600 hover:text-gray-900">Гарантии</a>
+        <a href="/contacts" class="text-gray-600 hover:text-gray-900">Контакты</a>
+        <a href="/blog" class="text-gray-600 hover:text-gray-900">Блог</a>
       </div>
       <div class="gap-10 flex justify-between">
         <span class="text-gray-600">8 (800) 890-46-56</span>
-        <a href="#" class="text-gray-400">Заказать звонок</a>
+        <a
+          href="#"
+          @click.prevent="showModal"
+          class="text-gray-400 cursor-pointer"
+          >Заказать звонок</a
+        >
       </div>
+      <ModalCall :isVisible="isModalVisible" @close="isModalVisible = false" />
     </nav>
 
+    <!-- Navbar for Mobile View -->
     <div class="sticky top-0 left-0 backdrop-blur-lg z-10">
       <header
         class="container mx-auto flex justify-between items-center bg-white pt-3"
@@ -28,7 +34,7 @@
         <div class="flex items-center">
           <button class="px-6 py-2 rounded-full lg:hidden" @click="toggleMenu">
             <div class="flex justify-between gap-2 items-center">
-              <img src="/images/menu.png" alt="" class="h-3" />
+              <img src="/images/menu.png" alt="Menu" class="h-3" />
             </div>
           </button>
           <nuxt-link to="/">
@@ -38,7 +44,7 @@
             class="bg-gray-800 text-white px-6 py-2 rounded-full hidden lg:flex"
           >
             <div class="flex justify-between gap-2 items-center">
-              <img src="/images/catalog.png" alt="" class="h-3" />
+              <img src="/images/catalog.png" alt="Catalog" class="h-3" />
               Каталог
             </div>
           </button>
@@ -85,27 +91,28 @@
               href="#"
               class="flex flex-col items-center text-gray-600 hover:text-gray-900"
             >
-              <img src="/images/saved.png" alt="" class="w-5 h-5" />
+              <img src="/images/saved.png" alt="Избранное" class="w-5 h-5" />
               Избранное
             </a>
             <a
               href="#"
               class="flex flex-col items-center text-gray-600 hover:text-gray-900"
             >
-              <img src="/images/compare.png" alt="" class="w-5 h-5" />
+              <img src="/images/compare.png" alt="Сравнение" class="w-5 h-5" />
               Сравнение
             </a>
             <a
               href="#"
               class="flex flex-col items-center text-gray-600 hover:text-gray-900"
             >
-              <img src="/images/cart.png" alt="" class="w-5 h-5" />
+              <img src="/images/cart.png" alt="Корзина" class="w-5 h-5" />
               Корзина
             </a>
           </div>
         </div>
       </header>
     </div>
+
     <!-- Collapsible Navbar for Mobile View -->
     <nav
       v-if="isMenuOpen"
@@ -126,12 +133,17 @@
           class="bg-gray-800 text-white px-6 py-2 rounded-full w-[300px] h-14"
         >
           <div class="flex justify-center gap-3 items-center">
-            <img src="/images/catalog.png" alt="" class="h-3" />
+            <img src="/images/catalog.png" alt="Каталог" class="h-3" />
             Каталог
           </div>
         </button>
         <span class="text-gray-600">8 (800) 890-46-56</span>
-        <a href="#" class="text-gray-400">Заказать звонок</a>
+        <a
+          href="#"
+          @click.prevent="showModal"
+          class="text-gray-400 cursor-pointer"
+          >Заказать звонок</a
+        >
       </div>
     </nav>
 
@@ -161,22 +173,23 @@
         />
       </svg>
     </div>
+    <ModalCall :isVisible="isModalVisible" @close="isModalVisible = false" />
   </div>
 </template>
 
-<script>
-export default {
-  name: "Navbar",
-  data() {
-    return {
-      isMenuOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-    },
-  },
+<script setup>
+import { ref } from "vue";
+import ModalCall from "./ModalCall.vue";
+
+const isModalVisible = ref(false);
+const isMenuOpen = ref(false);
+
+const showModal = () => {
+  isModalVisible.value = true;
+};
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
 };
 </script>
 
