@@ -1,10 +1,11 @@
 <template>
-  <div class="container mx-auto p-6 pt-10 pb-10">
-    <div class="flex justify-between pb-4">
-      <h2 class="text-2xl font-bold mb-6 text-center flex">Блог</h2>
-
+  <div class="container mx-auto p-4 pt-6 pb-6 md:p-6 md:pt-10 md:pb-10">
+    <div class="flex flex-col md:flex-row justify-between items-center pb-4">
+      <h2 class="text-2xl font-bold mb-4 md:mb-0 text-center md:text-left">
+        Блог
+      </h2>
       <button
-        class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
+        class="border border-black rounded-full py-2 px-4 text-sm flex items-center gap-2"
       >
         Перейти в блог
         <svg
@@ -18,19 +19,24 @@
         </svg>
       </button>
     </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 border-b-2">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 border-b-2"
+    >
       <div
         v-for="benefit in benefits"
         :key="benefit.title"
-        class="bg-white text-center"
+        class="bg-white text-center shadow-md rounded-lg overflow-hidden"
       >
         <div class="mb-4">
-          <img :src="benefit.imageSrc" alt="" class="flex w-full" />
+          <img
+            :src="benefit.imageSrc"
+            alt=""
+            class="w-full h-48 object-cover"
+          />
         </div>
-        <div class="py-5 text-start justify-between">
-          <div class="flex justify-between">
-            <h3 class="text-xl font-semibold mb-2">{{ benefit.title }}</h3>
+        <div class="px-4 py-4 text-left">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-semibold">{{ benefit.title }}</h3>
             <div class="flex justify-end cursor-pointer">
               <svg
                 width="18"
@@ -53,29 +59,29 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      benefits: [
-        {
-          title: "Как правильно освещать дом снаружи?",
-          description: "01.01.2024",
-          imageSrc: "/images/house1.png",
-        },
-        {
-          title: "Как правильно освещать дом снаружи?",
-          description: "01.01.2024",
-          imageSrc: "/images/house2.png",
-        },
-        {
-          title: "Как правильно освещать дом снаружи?",
-          description: "01.01.2024",
-          imageSrc: "/images/house3.png",
-        },
-      ],
-    };
+
+<script setup>
+const benefits = [
+  {
+    title: "Как правильно освещать дом снаружи?",
+    description: "01.01.2024",
+    imageSrc: "/images/house1.png",
   },
-};
+  {
+    title: "Как правильно освещать дом снаружи?",
+    description: "01.01.2024",
+    imageSrc: "/images/house2.png",
+  },
+  {
+    title: "Как правильно освещать дом снаружи?",
+    description: "01.01.2024",
+    imageSrc: "/images/house3.png",
+  },
+];
 </script>
-<style lang=""></style>
+
+<style scoped>
+.container {
+  max-width: 1200px;
+}
+</style>
