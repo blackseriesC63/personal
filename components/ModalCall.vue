@@ -4,7 +4,7 @@
       v-if="isVisible"
       class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50"
     >
-      <div class="bg-white p-6 rounded-3xl w-full max-w-lg relative">
+      <div class="bg-white rounded-2xl p-6 w-full max-w-lg mx-2 relative">
         <button
           @click="closeModal"
           class="absolute top-4 right-4 text-gray-600 hover:text-gray-800"

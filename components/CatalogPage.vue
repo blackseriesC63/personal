@@ -1,6 +1,37 @@
 <template>
-  <div class="container mx-auto p-6">
+  <div class="container mx-auto pt-8">
+    <nav class="pb-10">
+      <div
+        class="gap-10 hidden md:flex justify-between bg-gray-100 p-2 rounded-full px-6"
+      >
+        <a href="/about" class="text-gray-600 hover:text-gray-900"
+          >Светильники</a
+        >
+        <a href="/shipping" class="text-gray-600 hover:text-gray-900">Люстры</a>
+        <a href="/return" class="text-gray-600 hover:text-gray-900">Лампы</a>
+        <a href="/garant" class="text-gray-600 hover:text-gray-900"
+          >Настольные лампы</a
+        >
+        <a href="/contacts" class="text-gray-600 hover:text-gray-900"
+          >Ночники</a
+        >
+        <a href="/blog" class="text-gray-600 hover:text-gray-900">Подстветка</a>
+        <a href="/garant" class="text-gray-600 hover:text-gray-900"
+          >Уличное освещение</a
+        >
+        <a href="/contacts" class="text-gray-600 hover:text-gray-900"
+          >Мебельные установки</a
+        >
+      </div>
+    </nav>
+
     <!-- Catalog Header -->
+    <div class="flex flex-col md:flex-row justify-between items-center pb-4">
+      <div class="flex justify-between gap-2">
+        <a href="/"><p>Главная ></p></a>
+        <a href="/catalog"><p>Каталог</p></a>
+      </div>
+    </div>
     <div class="flex justify-between pb-4">
       <h2 class="text-2xl font-bold mb-6 text-center flex">Каталог</h2>
     </div>
@@ -18,7 +49,7 @@
             <img
               :src="item.image"
               :alt="item.title"
-              class="max-md:mx-auto max-md:w-3/3 object-cover rounded-md"
+              class="max-md:mx-auto max-md:w-full object-cover rounded-md"
             />
           </div>
 
@@ -27,7 +58,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-2 gap-6 pt-5">
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-6 pt-5 pb-10">
       <div
         v-for="item in doubleItems"
         :key="item.title"
@@ -39,7 +70,7 @@
             <img
               :src="item.image"
               :alt="item.title"
-              class="max-md:mx-auto max-md:w-3/3 object-cover rounded-md"
+              class="max-md:mx-auto max-md:w-full object-cover rounded-md"
             />
           </div>
 
@@ -47,7 +78,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -83,7 +113,7 @@ export default {
         },
       ],
       doubleItems: [
-         {
+        {
           title: "Быстрая доставка",
           price: "От 540₽",
           image: "/images/diod.png",
