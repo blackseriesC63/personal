@@ -5,13 +5,17 @@
       class="container mx-auto justify-between items-center lg:flex space-x-6 pt-3 hidden lg:flex"
     >
       <div class="gap-10 flex justify-between">
-        <a href="/about" class="text-gray-600 hover:text-gray-900">О компании</a>
+        <a href="/about" class="text-gray-600 hover:text-gray-900"
+          >О компании</a
+        >
         <a href="/shipping" class="text-gray-600 hover:text-gray-900"
           >Доставка и оплата</a
         >
         <a href="/return" class="text-gray-600 hover:text-gray-900">Возврат</a>
         <a href="/garant" class="text-gray-600 hover:text-gray-900">Гарантии</a>
-        <a href="/contacts" class="text-gray-600 hover:text-gray-900">Контакты</a>
+        <a href="/contacts" class="text-gray-600 hover:text-gray-900"
+          >Контакты</a
+        >
         <a href="/blog" class="text-gray-600 hover:text-gray-900">Блог</a>
       </div>
       <div class="gap-10 flex justify-between">
@@ -119,14 +123,18 @@
       class="container mx-auto flex flex-col items-center text-center lg:hidden space-y-2 pt-3"
     >
       <div class="gap-10 flex flex-col">
-        <a href="#" class="text-gray-600 hover:text-gray-900">О компании</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900"
+        <a href="/about" class="text-gray-600 hover:text-gray-900"
+          >О компании</a
+        >
+        <a href="/shipping" class="text-gray-600 hover:text-gray-900"
           >Доставка и оплата</a
         >
-        <a href="#" class="text-gray-600 hover:text-gray-900">Возврат</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Гарантии</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Контакты</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Блог</a>
+        <a href="/return" class="text-gray-600 hover:text-gray-900">Возврат</a>
+        <a href="/garant" class="text-gray-600 hover:text-gray-900">Гарантии</a>
+        <a href="/contacts" class="text-gray-600 hover:text-gray-900"
+          >Контакты</a
+        >
+        <a href="/blog" class="text-gray-600 hover:text-gray-900">Блог</a>
       </div>
       <div class="gap-10 flex flex-col pt-5">
         <button
