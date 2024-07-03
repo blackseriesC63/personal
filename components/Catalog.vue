@@ -10,21 +10,25 @@
       <div
         v-for="item in catalogItems"
         :key="item.title"
-        class=" bg-gray-100 p-4 rounded-lg shadow"
+        class="bg-gray-100 p-4 rounded-lg shadow flex justify-between"
       >
+        <div class="flex flex-col justify-between p-2">
+          <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
+          <p class="text-gray-500">{{ item.price }}</p>
+        </div>
         <img
           :src="item.image"
           :alt="item.title"
-          class="w-full h-40 object-cover mb-4 rounded-md"
+          class="h-40 object-cover mb-4 rounded-md"
         />
-        <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
-        <p class="text-gray-500">{{ item.price }}</p>
       </div>
     </div>
 
     <!-- Why NORNLIGHT Section -->
     <div class="mt-16">
-      <h2 class="text-2xl font-bold mb-6 text-center">Почему NORNLIGHT?</h2>
+      <h2 class="text-2xl font-bold mb-6 text-center flex">
+        Почему NORNLIGHT?
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div
           v-for="benefit in benefits"
@@ -32,10 +36,12 @@
           class="bg-white p-4 rounded-lg shadow text-center"
         >
           <div class="mb-4">
-            <i :class="`fas fa-${benefit.icon} text-3xl text-blue-500`"></i>
+            <img :src="benefit.imageSrc" alt="" class=" flex p-8" />
           </div>
-          <h3 class="text-xl font-semibold mb-2">{{ benefit.title }}</h3>
-          <p class="text-gray-500">{{ benefit.description }}</p>
+          <div class=" py-5 p-5 text-start">
+            <h3 class="text-xl font-semibold mb-2">{{ benefit.title }}</h3>
+            <p class="text-gray-500">{{ benefit.description }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -60,24 +66,24 @@ export default {
       ],
       benefits: [
         {
-          icon: "badge-check",
-          title: "Только проверенные бренды",
-          description: "Бренды, проверенные временем.",
+          title: "Только проверенные бренды доставка",
+          description: "Бренды, проверенные временем и качеством.",
+          imageSrc: "/images/brand.png",
         },
         {
-          icon: "tag",
           title: "Самые низкие цены",
           description: "Ниже не будет нигде.",
+          imageSrc: "/images/empty.png",
         },
         {
-          icon: "truck",
           title: "Быстрая доставка",
           description: "Доставляем по всей РФ за 1-10 дней.",
+          imageSrc: "/images/brand.png",
         },
         {
-          icon: "archive",
           title: "Большой ассортимент",
           description: "Более 1000 товаров.",
+          imageSrc: "/images/empty.png",
         },
       ],
     };
