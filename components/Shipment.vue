@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-4 pt-6 pb-6 md:p-6 md:pt-10 md:pb-10">
+  <div class="container mx-auto pt-6 pb-6 md:pt-10 md:pb-10">
     <div class="flex flex-col md:flex-row justify-between items-center pb-4">
       <div class="flex justify-between gap-2">
         <a href="/"><p>Главная ></p></a>
@@ -7,9 +7,8 @@
       </div>
     </div>
   </div>
-  <h1 class="container mx-auto px-6 text-6xl"></h1>
 
-  <div class="container mx-auto px-4 py-8 grid lg:grid-cols-3 gap-8">
+  <div class="container mx-auto py-8 grid lg:grid-cols-3 gap-8">
     <!-- Statistics Section -->
     <div class="space-y-6">
       <div class="text-start">
@@ -44,15 +43,12 @@
       </p>
     </div>
   </div>
-  <div class=" container flex mx-auto py-6  ">
-    <img src="/images/map.png" alt="" class="" />
+
+  <div>
+    <img src="/images/map.png" alt="Map" class="w-full h-auto px-10 py-10" />
   </div>
 </template>
 
 <script setup></script>
 
-<style scoped>
-.container {
-  max-width: 1200px;
-}
-</style>
+<style scoped></style>

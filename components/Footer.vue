@@ -78,26 +78,26 @@
           <h4 class="font-semibold">Покупателям</h4>
           <ul class="space-y-1">
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700"
+              <a href="/about" class="text-gray-500 hover:text-gray-700"
                 >О компании</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700"
+              <a href="/shipping" class="text-gray-500 hover:text-gray-700"
                 >Доставка и оплата</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700">Возврат</a>
+              <a href="/return" class="text-gray-500 hover:text-gray-700">Возврат</a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700">Гарантии</a>
+              <a href="/garant" class="text-gray-500 hover:text-gray-700">Гарантии</a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700">Контакты</a>
+              <a href="/contacts" class="text-gray-500 hover:text-gray-700">Контакты</a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700">Блог</a>
+              <a href="/blog" class="text-gray-500 hover:text-gray-700">Блог</a>
             </li>
           </ul>
         </div>
@@ -105,26 +105,26 @@
           <h4 class="font-semibold">Товары</h4>
           <ul class="space-y-1">
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700">Люстры</a>
+              <a href="/allproducts" class="text-gray-500 hover:text-gray-700">Люстры</a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700"
+              <a href="/allproducts" class="text-gray-500 hover:text-gray-700"
                 >Светильники</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700">Бра</a>
+              <a href="/allproducts" class="text-gray-500 hover:text-gray-700">Бра</a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700">Торшеры</a>
+              <a href="/allproducts" class="text-gray-500 hover:text-gray-700">Торшеры</a>
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700"
+              <a href="/catalog" class="text-gray-500 hover:text-gray-700"
                 >Комплектующие</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-500 hover:text-gray-700"
+              <a href="/catalog" class="text-gray-500 hover:text-gray-700"
                 >Настольные лампы</a
               >
             </li>

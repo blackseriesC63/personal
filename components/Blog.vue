@@ -81,7 +81,5 @@ const benefits = [
 </script>
 
 <style scoped>
-.container {
-  max-width: 1200px;
-}
+
 </style>

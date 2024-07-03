@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-14">
+  <div class="container mx-auto px-6">
     <h2 class="text-2xl font-bold mb-4 md:mb-0 text-center md:text-left">
       Только проверенные бренды
     </h2>

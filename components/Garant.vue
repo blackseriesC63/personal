@@ -1,10 +1,9 @@
 <template>
-  <div class="container mx-auto p-4 pt-6 pb-6 md:p-6 md:pt-10 md:pb-10">
+  <div class="container mx-auto pt-6 pb-6 md:pt-10 md:pb-10">
     <div class="flex flex-col md:flex-row justify-between items-center pb-4">
       <div class="flex justify-between gap-2">
         <a href="/"><p>Главная ></p></a>
         <a href="/garant"><p>Гарант</p></a>
-        
       </div>
     </div>
   </div>
@@ -39,16 +38,15 @@
         доставки: 4—6 недель
       </p>
 
-      <p>Обращаем внимание, что «А-Свет» не является сервисным центром, а выполняет роль посредника между клиентом и поставщиком.
-Поэтому сроки проведения ремонта могут отличаться для товаров различных брендов.</p>
+      <p>
+        Обращаем внимание, что «А-Свет» не является сервисным центром, а
+        выполняет роль посредника между клиентом и поставщиком. Поэтому сроки
+        проведения ремонта могут отличаться для товаров различных брендов.
+      </p>
     </div>
   </div>
 </template>
 
 <script setup></script>
 
-<style scoped>
-.container {
-  max-width: 1200px;
-}
-</style>
+<style scoped></style>

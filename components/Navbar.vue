@@ -44,14 +44,16 @@
           <nuxt-link to="/">
             <img src="/images/logo.png" alt="NORNLIGHT logo" class="h-8 mr-2" />
           </nuxt-link>
-          <button
-            class="bg-gray-800 text-white px-6 py-2 rounded-full hidden lg:flex"
-          >
-            <div class="flex justify-between gap-2 items-center">
-              <img src="/images/catalog.png" alt="Catalog" class="h-3" />
-              Каталог
-            </div>
-          </button>
+          <nuxt-link to="/catalog">
+            <button
+              class="bg-gray-800 text-white px-6 py-2 rounded-full hidden lg:flex"
+            >
+              <div class="flex justify-between gap-2 items-center">
+                <img src="/images/catalog.png" alt="Catalog" class="h-3" />
+                Каталог
+              </div>
+            </button>
+          </nuxt-link>
         </div>
 
         <div class="flex items-center pr-5 py-4 space-x-4 lg:hidden">
@@ -181,7 +183,6 @@
         />
       </svg>
     </div>
-    <ModalCall :isVisible="isModalVisible" @close="isModalVisible = false" />
   </div>
 </template>
 

@@ -23,28 +23,19 @@ getProducts();
 </script>
 
 <template>
-  <div class="container mx-auto p-5">
+  <div class="container mx-auto pt-6 pb-6 md:pt-10 md:pb-10">
+    <div class="flex flex-col md:flex-row justify-between items-center pb-4">
+      <div class="flex justify-between gap-2">
+        <a href="/"><p>Главная ></p></a>
+        <a href="/garant"><p>Гарант</p></a>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto pb-10">
     <div class="flex justify-between pb-4">
       <h2 class="text-2xl font-bold mb-6 text-center flex">
         Популярные товары
       </h2>
-
-      <a href="/allProducts">
-        <button
-          class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
-        >
-          Все товары
-          <svg
-            width="15"
-            height="12"
-            viewBox="0 0 15 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0 6H14M14 6L9 11M14 6L9 1" stroke="#454545" />
-          </svg>
-        </button>
-      </a>
     </div>
 
     <div

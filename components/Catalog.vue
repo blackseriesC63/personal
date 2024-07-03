@@ -4,7 +4,8 @@
     <div class="flex justify-between pb-4">
       <h2 class="text-2xl font-bold mb-6 text-center flex">Каталог</h2>
 
-      <button
+      <a href="/catalog">
+        <button
         class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
       >
         Весь каталог
@@ -18,6 +19,8 @@
           <path d="M0 6H14M14 6L9 11M14 6L9 1" stroke="#454545" />
         </svg>
       </button>
+      </a>
+      
     </div>
 
     <!-- Catalog Items -->

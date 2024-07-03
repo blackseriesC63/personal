@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-4 pt-6 pb-6 md:p-6 md:pt-10 md:pb-10">
+  <div class="container mx-auto pt-6 pb-6 md:pt-10 md:pb-10">
     <div class="flex flex-col md:flex-row justify-between items-center pb-4">
       <div class="flex justify-between gap-2">
         <a href="/"><p>Главная ></p></a>
@@ -75,8 +75,4 @@
 
 <script setup></script>
 
-<style scoped>
-.container {
-  max-width: 1200px;
-}
-</style>
+<style scoped></style>
