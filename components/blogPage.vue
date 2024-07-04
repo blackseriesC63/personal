@@ -3,7 +3,7 @@
     <div class="flex flex-col md:flex-row justify-between items-center pb-4">
       <div class="flex justify-between gap-2">
         <a href="/"><p>Главная ></p></a>
-        <a href="/return"><p>Возврат</p></a>
+        <a href="/return"><p>Блог</p></a>
       </div>
     </div>
     <div class="flex flex-col md:flex-row justify-between items-center pb-4">
@@ -11,9 +11,7 @@
         Блог
       </h2>
     </div>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 "
-    >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
         v-for="benefit in benefits"
         :key="benefit.title"
@@ -48,7 +46,7 @@
           <p class="text-gray-500">{{ benefit.description }}</p>
         </div>
       </div>
-            <div
+      <div
         v-for="benefit in benefits"
         :key="benefit.title"
         class="bg-white text-center shadow-md rounded-lg overflow-hidden"
@@ -106,6 +104,4 @@ const benefits = [
 ];
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

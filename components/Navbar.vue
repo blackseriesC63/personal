@@ -2,7 +2,7 @@
   <div>
     <!-- Navbar for Desktop View -->
     <nav
-      class="container mx-auto justify-between items-center lg:flex space-x-6 pt-3 hidden lg:flex"
+      class="container mx-auto justify-between items-center lg:flex space-x-6 pt-3 hidden"
     >
       <div class="gap-10 flex justify-between">
         <a href="/about" class="text-gray-600 hover:text-gray-900"

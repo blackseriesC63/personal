@@ -6,7 +6,7 @@
 
       <a href="/catalog">
         <button
-          class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
+          class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-black hover:text-white"
         >
           Весь каталог
           <svg
@@ -23,26 +23,28 @@
     </div>
 
     <!-- Catalog Items -->
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-      <div
-        v-for="item in catalogItems"
-        :key="item.title"
-        class="bg-gray-100 p-4 rounded-lg shadow flex flex-col hover:bg-slate-800 hover:text-white"
-      >
-        <div class="flex flex-col justify-between h-full p-2">
-          <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
-          <div class="flex justify-end">
-            <img
-              :src="item.image"
-              :alt="item.title"
-              class="max-md:mx-auto max-md:w-3/3 object-cover rounded-md"
-            />
-          </div>
+    <router-link to="/catalog">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div
+          v-for="item in catalogItems"
+          :key="item.title"
+          class="bg-gray-100 p-4 rounded-lg shadow flex flex-col hover:bg-slate-800 hover:text-white"
+        >
+          <div class="flex flex-col justify-between h-full p-2">
+            <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
+            <div class="flex justify-end">
+              <img
+                :src="item.image"
+                :alt="item.title"
+                class="max-md:mx-auto max-md:w-3/3 object-cover rounded-md"
+              />
+            </div>
 
-          <p class="text-gray-500 hover:text-white">{{ item.price }}</p>
+            <p class="text-gray-500 hover:text-white">{{ item.price }}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </router-link>
 
     <!-- Why NORNLIGHT Section -->
     <div class="mt-16">
@@ -53,7 +55,7 @@
 
         <a href="/about"
           ><button
-            class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
+            class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-black hover:text-white"
           >
             О компании
             <svg

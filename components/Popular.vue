@@ -1,5 +1,5 @@
 <script setup>
-import ProductCard from './products/ProductCard.vue';
+import ProductCard from "./products/ProductCard.vue";
 
 useHead({
   title: "Main page",
@@ -33,7 +33,7 @@ getProducts();
 
       <a href="/allProducts">
         <button
-          class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3"
+          class="border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-black hover:text-white"
         >
           Все товары
           <svg

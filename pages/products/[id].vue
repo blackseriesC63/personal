@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-6">
+  <div class="container mx-auto p-1">
     <div class="flex flex-col md:flex-row gap-6">
       <!-- Product Image -->
       <div class="md:w-1/2">
@@ -25,20 +25,38 @@
         <div class="flex justify-between">
           <div class="text-gray-500">Артикул: 7655-188</div>
           <div class="flex gap-2">
-            <img src="/images/socials.png" alt="" />
-            <img src="/images/socials-2.png" alt="" class="hover:bg-slate-800" />
-            <img src="/images/socials-3.png" alt="" class="hover:bg-slate-800" />
-            <img src="/images/socials-4.png" alt="" class="hover:bg-slate-800" />
-            <img src="/images/socials-5.png" alt="" class="hover:bg-slate-800" />
+            <img
+              src="/images/socials.png"
+              alt=""
+              class="hover:bg-gray-800 rounded-lg p-1"
+            />
+            <img
+              src="/images/socials-2.png"
+              alt=""
+              class="hover:bg-gray-800 rounded-lg p-1"
+            />
+            <img
+              src="/images/socials-3.png"
+              alt=""
+              class="hover:bg-gray-800 rounded-lg p-1"
+            />
+            <img
+              src="/images/socials-4.png"
+              alt=""
+              class="hover:bg-gray-800 rounded-lg p-1"
+            />
+            <img
+              src="/images/socials-5.png"
+              alt=""
+              class="hover:bg-gray-800 rounded-lg p-1"
+            />
           </div>
         </div>
 
         <div class="text-green-500">В наличии</div>
 
         <div class="flex items-center py-5">
-          <div class="text-3xl font-bold text-black">
-            {{ totalNewPrice }} ₽
-          </div>
+          <div class="text-3xl font-bold text-black">{{ totalNewPrice }} ₽</div>
           <div class="text-xl line-through text-gray-400 justify-start pl-4">
             {{ totalOldPrice }} ₽
           </div>
@@ -49,17 +67,27 @@
         <!-- Quantity and Add to Cart -->
         <div class="flex items-center space-x-4">
           <div class="flex items-center border border-gray-300 rounded-lg">
-            <button @click="updateQuantity(-1)" class="px-4 py-2 text-gray-600">-</button>
+            <button @click="updateQuantity(-1)" class="px-4 py-2 text-gray-600">
+              -
+            </button>
             <input
               type="text"
               :value="quantity"
               class="w-12 text-center border-none focus:outline-none"
               readonly
             />
-            <button @click="updateQuantity(1)" class="px-4 py-2 text-gray-600">+</button>
+            <button @click="updateQuantity(1)" class="px-4 py-2 text-gray-600">
+              +
+            </button>
           </div>
-          <button class="bg-black text-white rounded-lg py-2 px-6 hover:bg-gray-800">В корзину</button>
-          <button class="border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-200">
+          <button
+            class="bg-black text-white rounded-lg py-2 px-6 hover:bg-gray-800"
+          >
+            В корзину
+          </button>
+          <button
+            class="border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-200"
+          >
             <img src="/images/heart.png" alt="" />
           </button>
         </div>
@@ -71,8 +99,8 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { ref, computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
 
 const route = useRoute();
 
@@ -87,17 +115,17 @@ const fetchProduct = async () => {
     const data = await response.json();
     product.value = {
       ...data,
-      image: data.image || '/default-image.png', // Fallback image
+      image: data.image || "/default-image.png", // Fallback image
     };
   } catch (error) {
-    console.error('Error fetching product:', error);
+    console.error("Error fetching product:", error);
     product.value = {
-      name: 'Default Product Name',
-      brand: 'Default Brand',
-      price: '0',
-      oldPrice: '0',
-      description: 'Default description',
-      image: '/default-image.png', // Fallback image
+      name: "Default Product Name",
+      brand: "Default Brand",
+      price: "0",
+      oldPrice: "0",
+      description: "Default description",
+      image: "/default-image.png", // Fallback image
     };
   }
 };
@@ -109,11 +137,15 @@ const updateQuantity = (amount) => {
 };
 
 const totalNewPrice = computed(() => {
-  return product.value ? (product.value.newPrice * quantity.value).toFixed(2) : '0';
+  return product.value
+    ? (product.value.newPrice * quantity.value).toFixed(2)
+    : "0";
 });
 
 const totalOldPrice = computed(() => {
-  return product.value ? (product.value.oldPrice * quantity.value).toFixed(2) : '0';
+  return product.value
+    ? (product.value.oldPrice * quantity.value).toFixed(2)
+    : "0";
 });
 
 onMounted(() => {

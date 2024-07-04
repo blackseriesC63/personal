@@ -5,7 +5,7 @@
         Блог
       </h2>
       <button
-        class="border border-black rounded-full py-2 px-4 text-sm flex items-center gap-2"
+        class="border border-black rounded-full py-2 px-4 text-sm flex items-center gap-2 hover:bg-black hover:text-white"
       >
         Перейти в блог
         <svg
@@ -38,19 +38,20 @@
           <div class="flex justify-between items-start mb-2">
             <h3 class="text-xl font-semibold">{{ benefit.title }}</h3>
             <div class="flex justify-end cursor-pointer">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 1H17M17 1V17M17 1L1 17"
-                  stroke="black"
-                  stroke-width="2"
-                />
-              </svg>
+              <router-link to="/blog"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1H17M17 1V17M17 1L1 17"
+                    stroke="black"
+                    stroke-width="2"
+                  /></svg
+              ></router-link>
             </div>
           </div>
           <p class="text-gray-500">{{ benefit.description }}</p>
@@ -80,6 +81,4 @@ const benefits = [
 ];
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
