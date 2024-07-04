@@ -1,4 +1,6 @@
 <script setup>
+import ProductCard from './products/ProductCard.vue';
+
 useHead({
   title: "Main page",
   link: {

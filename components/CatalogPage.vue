@@ -4,22 +4,18 @@
       <div
         class="gap-10 hidden md:flex justify-between bg-gray-100 p-2 rounded-full px-6"
       >
-        <a href="/about" class="text-gray-600 hover:text-gray-900"
-          >Светильники</a
-        >
-        <a href="/shipping" class="text-gray-600 hover:text-gray-900">Люстры</a>
-        <a href="/return" class="text-gray-600 hover:text-gray-900">Лампы</a>
-        <a href="/garant" class="text-gray-600 hover:text-gray-900"
+        <a href="#" class="text-gray-600 hover:text-gray-900">Светильники</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Люстры</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Лампы</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900"
           >Настольные лампы</a
         >
-        <a href="/contacts" class="text-gray-600 hover:text-gray-900"
-          >Ночники</a
-        >
-        <a href="/blog" class="text-gray-600 hover:text-gray-900">Подстветка</a>
-        <a href="/garant" class="text-gray-600 hover:text-gray-900"
+        <a href="#" class="text-gray-600 hover:text-gray-900">Ночники</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Подстветка</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900"
           >Уличное освещение</a
         >
-        <a href="/contacts" class="text-gray-600 hover:text-gray-900"
+        <a href="#" class="text-gray-600 hover:text-gray-900"
           >Мебельные установки</a
         >
       </div>
@@ -41,7 +37,7 @@
       <div
         v-for="item in catalogItems"
         :key="item.title"
-        class="bg-gray-100 p-4 rounded-lg shadow flex flex-col"
+        class="bg-gray-100 p-4 rounded-lg shadow flex flex-col hover:bg-slate-900 hover:text-white"
       >
         <div class="flex flex-col justify-between h-full p-2">
           <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
@@ -62,7 +58,7 @@
       <div
         v-for="item in doubleItems"
         :key="item.title"
-        class="bg-gray-100 p-4 rounded-lg shadow flex flex-col"
+        class="bg-gray-100 p-4 rounded-lg shadow flex flex-col hover:bg-slate-900 hover:text-white"
       >
         <div class="flex flex-col justify-between h-full p-2">
           <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>

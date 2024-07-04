@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Detail />
+    <ProductDetail />
+    <Specs />
   </div>
 </template>
 <script setup></script>

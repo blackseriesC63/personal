@@ -27,7 +27,7 @@
       <div
         v-for="item in catalogItems"
         :key="item.title"
-        class="bg-gray-100 p-4 rounded-lg shadow flex flex-col"
+        class="bg-gray-100 p-4 rounded-lg shadow flex flex-col hover:bg-slate-800 hover:text-white"
       >
         <div class="flex flex-col justify-between h-full p-2">
           <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
@@ -39,7 +39,7 @@
             />
           </div>
 
-          <p class="text-gray-500">{{ item.price }}</p>
+          <p class="text-gray-500 hover:text-white">{{ item.price }}</p>
         </div>
       </div>
     </div>
