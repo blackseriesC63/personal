@@ -7,19 +7,22 @@
       </div>
     </div>
   </div>
+
   <div class="container mx-auto">
-    <div class="flex justify-between mx-auto">
+    <div class="flex flex-col md:flex-row justify-between mx-auto">
       <!-- Statistics Section -->
-      <div class="space-y-6">
-        <div class="text-start">
-          <h1 class="text-6xl">Контакты</h1>
+      <div class="w-full md:w-1/2 space-y-6">
+        <div class="text-center md:text-left">
+          <h1 class="text-4xl md:text-6xl">Контакты</h1>
         </div>
       </div>
 
       <!-- Description Section -->
-      <div class="lg:col-span-2 space-y-6 text-gray-700 leading-relaxed">
+      <div
+        class="w-full md:w-1/2 lg:col-span-2 space-y-6 text-gray-700 leading-relaxed"
+      >
         <div>
-          <h1 class="text-2xl text-black">8 (800) 890-46-56</h1>
+          <h1 class="text-xl md:text-2xl text-black">8 (800) 890-46-56</h1>
           <p>
             Пн-Пт: 10:00 до 19:00 <br />
             Сб-Вс: заказ через корзину <br />
@@ -30,24 +33,23 @@
     </div>
   </div>
 
-  <div class="relative pb-10">
+  <div class="container mx-auto justify-between">
     <div>
-      <img src="/images/map.png" alt="Map" class="w-full h-auto px-10 pt-10" />
+      <img src="/images/map.png" alt="Map" class="w-full pb-10" />
     </div>
-    <div
-      class="bg-white rounded-lg shadow-lg px-10 py-10 absolute bottom-40 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-11/12 max-w-screen-lg"
-    >
-      <div class="flex justify-between w-full">
-        <div class="flex flex-col items-start">
-          <h2 class="text-xl font-bold">Адрес магазина</h2>
+
+    <div class="bg-slate-200 px-10 py-10 justify-between items-center">
+      <div class="flex flex-col md:flex-row justify-between items-start w-full">
+        <div class="mb-4 md:mb-0 md:w-1/3">
+          <h2 class="text-xl md:text-2xl font-bold">Адрес магазина</h2>
           <p class="text-gray-600">г. Москва, Дмитровское шоссе д.10с2</p>
         </div>
-        <div class="flex flex-col items-start">
-          <h2 class="text-xl font-bold">Почта</h2>
+        <div class="mb-4 md:mb-0 md:w-1/3">
+          <h2 class="text-xl md:text-2xl font-bold">Почта</h2>
           <p class="text-gray-600">NORNLIGHT@mail.ru</p>
         </div>
-        <div class="flex flex-col items-start">
-          <h2 class="text-xl font-bold">Телефон</h2>
+        <div class="mb-4 md:mb-0 md:w-1/3">
+          <h2 class="text-xl md:text-2xl font-bold">Телефон</h2>
           <p class="text-gray-600">8 (800) 890-46-56</p>
         </div>
         <div class="flex items-center">
@@ -64,4 +66,6 @@
 
 <script setup></script>
 
-<style scoped></style>
+<style scoped>
+/* Add any custom styles here */
+</style>
