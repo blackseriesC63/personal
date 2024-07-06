@@ -49,9 +49,7 @@ getProducts();
       </a>
     </div>
 
-    <div
-      class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-    >
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <ProductCard v-for="item in products" :key="item?.id" :data="item" />
     </div>
   </div>

@@ -6,7 +6,6 @@
     <BrandSlider />
     <Blog />
     <Manufacturing />
-    
     <ModalCall />
 
   </div>

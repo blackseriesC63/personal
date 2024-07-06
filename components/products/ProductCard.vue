@@ -2,36 +2,86 @@
 const props = defineProps({
   data: Object,
 });
+
+import { usePiniaStore } from "../../store";
+import { computed } from "vue";
+
+const store = usePiniaStore();
+
+const toggleLike = () => {
+  store.addProductToLiked(props.data);
+};
+
+const isLiked = computed(() => {
+  const index = store.likedProducts.findIndex((p) => p.id == props.data.id);
+  return index !== -1;
+});
+
+const toggleBasket = () => {
+  store.addProductToBasket(props.data);
+};
+
+
 </script>
 
 <template>
-  <nuxt-link :to="`/products/${props.data?.id}`">
-    <div class="card p-3 bg-white shadow-lg rounded-md">
+  <div class="card p-3 bg-white shadow-lg rounded-md">
+    <nuxt-link :to="`/products/${props.data?.id}`">
       <img
         :src="props.data?.image"
         alt="image"
         class="w-full h-[150px] object-cover rounded mb-2"
       />
+    </nuxt-link>
+
+    <button @click="toggleLike">
       <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
+        v-if="!isLiked"
         xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        viewBox="0 0 48 48"
+        class="like-icon"
       >
-        <path
-          d="M12.1 18.55L12 18.65L11.89 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 6 11.07 7.36H12.93C13.46 6 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55ZM16.5 3C14.76 3 13.09 3.81 12 5.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5C2 12.27 5.4 15.36 10.55 20.03L12 21.35L13.45 20.03C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3Z"
-          fill="black"
-        />
+        <defs>
+          <mask id="ipTLike0">
+            <path
+              fill="#555"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="4"
+              d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8"
+            />
+          </mask>
+        </defs>
+        <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipTLike0)" />
       </svg>
 
-      <h2 class="text-xl pt-2 h-20">Card title: {{ props.data?.title }}</h2>
+      <svg
+        v-else
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        viewBox="0 0 48 48"
+        class="liked-icon"
+      >
+        <path
+          fill="#f44336"
+          d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12"
+        />
+      </svg>
+    </button>
 
-      <div class="flex justify-between items-end pt-8">
-        <div class="pt-3">
-          <p class="text-sm line-through">{{ props.data?.oldPrice }}</p>
-          <p class="font-bold text-2xl">{{ props.data?.newPrice }}</p>
-        </div>
+    <h2 class="text-xl pt-2 h-20">Card title: {{ props.data?.title }}</h2>
+
+    <div class="flex justify-between items-end pt-8">
+      <div class="pt-3">
+        <p class="text-sm line-through">{{ props.data?.oldPrice }}</p>
+        <p class="font-bold text-2xl">{{ props.data?.newPrice }}</p>
+      </div>
+
+      <button @click="toggleBasket">
         <svg
           width="55"
           height="33"
@@ -48,9 +98,15 @@ const props = defineProps({
             stroke-linejoin="round"
           />
         </svg>
-      </div>
+      </button>
     </div>
-  </nuxt-link>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.like-icon,
+.liked-icon {
+  width: 24px;
+  height: 24px;
+}
+</style>

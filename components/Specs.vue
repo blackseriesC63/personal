@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <h2 class="text-3xl font-semibold mb-6">Характеристика</h2>
     <div class="bg-white shadow rounded-lg overflow-hidden">
-      <div class="divide-y divide-gray-200 items-center">
+      <div class="divide-y divide-gray-200 items-center py-10">
         <!-- Row 1 -->
         <div class="grid grid-cols-2 gap-x-4 gap-y-2 p-4">
           <div class="font-semibold text-gray-600">Цвет</div>

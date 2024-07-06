@@ -80,12 +80,15 @@
               +
             </button>
           </div>
+
           <button
+            @click="toggleBasket"
             class="bg-black text-white rounded-lg py-2 px-6 hover:bg-gray-800"
           >
             В корзину
           </button>
           <button
+            @click="toggleLike"
             class="border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-200"
           >
             <img src="/images/heart.png" alt="" />
@@ -99,11 +102,23 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  data: Object,
+});
+
+import { usePiniaStore } from "../../store";
 import { ref, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
-const route = useRoute();
+const store = usePiniaStore();
 
+const toggleLike = () => {
+  store.addProductToLiked(props.data.id);
+};
+const toggleBasket = () => {
+  store.addProductToBasket(props.data.id);
+};
+const route = useRoute();
 const product = ref(null);
 const quantity = ref(1);
 
