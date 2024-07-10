@@ -157,7 +157,7 @@
               Купить
             </button>
           </div>
-          <div class="items-center text-sm w-full md:w-2/3 pt-6">
+          <div class="items-center text-sm w-full md:w-2/3 pt-2">
             <input type="checkbox" class="rounded-full p-2" />
             <label for="agreement" class="p-2"
               >Я согласен на обработку моих персональных данных</label
