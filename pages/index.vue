@@ -1,13 +1,10 @@
 <template>
   <div>
-    <Slider />
-    <Catalog />
-    <Popular />
-    <BrandSlider />
-    <Blog />
-    <Manufacturing />
-    <ModalCall />
-
+    <Navbar />
+    <About />
+    <Skills />
+    <AboutMe />
+    <Footer />
   </div>
 </template>
 <script setup></script>

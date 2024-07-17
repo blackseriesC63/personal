@@ -1,27 +1,20 @@
 <template>
   <div class="container mx-auto p-8 flex">
-    <div class="w-full flex justify-between items-center">
+    <div class="w-full flex justify-between items-center gap-10">
+      <div class="w-1/3 flex h-full">
+        <img src="/images/aboutMe.png" alt="Illustration" />
+      </div>
       <div class="w-2/3">
-        <div class="mb-8">
-          <h1 class="text-4xl text-gray-800 leading-tight">
-            Hello I'm <span class="font-bold">Nizomiddin Azam.</span> <br />
-            <span class="font-bold">Fullstack</span>
-            <span class="font-extrabold outline-text"> Developer </span>
-            <br />
-            <span>Based In </span>
-            <span class="font-extrabold">Uzbekistan.</span>
-          </h1>
-        </div>
+        
         <div>
-          <p class=" text-gray-700 leading-relaxed ">
+            <h1 class=" text-4xl ">About Me</h1>
+          <p class="text-gray-700 leading-relaxed text-lg">
             My name is Nizomiddin. I am 26 years old and I am a Junior Fullstack
             Developer with a solid foundation in creating and maintaining
             scalable websites. I am fluent in Russian, English, and Uzbek. I
             enrolled in Westminster University in Tashkent and after completing
             my second year in 2019, I moved to the USA. I lived in the USA for 4
-            years and returned last year.
-
-             <!-- This diverse background has allowed me
+            years and returned last year. This diverse background has allowed me
             to gain a broad perspective and strong technical skills. I have
             studied programming languages such as C, Python, and JavaScript, as
             well as Node.js, Vue, Nuxt, and Vite. I have hands-on experience
@@ -30,12 +23,9 @@
             Additionally, I possess knowledge of JavaScript (ES6) and WebSocket,
             which enables me to efficiently perform various backend development
             tasks. My knowledge of technical English ensures clear communication
-            in technical documentation and within team collaboration. -->
+            in technical documentation and within team collaboration.
           </p>
         </div>
-      </div>
-      <div class="w-1/3 flex h-full">
-        <img src="/images/Banner.png" alt="Illustration" />
       </div>
     </div>
   </div>
