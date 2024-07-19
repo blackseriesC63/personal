@@ -1,9 +1,9 @@
 <template>
-  <div class="container mx-auto p-8 flex">
-    <div class="w-full flex justify-between items-center">
-      <div class="w-2/3">
+  <div class="container mx-auto p-8 flex flex-col md:flex-row">
+    <div class="w-full md:flex justify-between items-center">
+      <div class="w-full md:w-2/3">
         <div class="mb-8">
-          <h1 class="text-4xl text-gray-800 leading-tight">
+          <h1 class="text-3xl md:text-4xl text-gray-800 leading-tight">
             Hello I'm <span class="font-bold">Nizomiddin Azam.</span> <br />
             <span class="font-bold">Fullstack</span>
             <span class="font-extrabold outline-text"> Developer </span>
@@ -13,29 +13,22 @@
           </h1>
         </div>
         <div>
-          <p class=" text-gray-700 leading-relaxed ">
+          <p class="text-gray-700 leading-relaxed">
             My name is Nizomiddin. I am 26 years old and I am a Junior Fullstack
             Developer with a solid foundation in creating and maintaining
             scalable websites. I am fluent in Russian, English, and Uzbek. I
             enrolled in Westminster University in Tashkent and after completing
             my second year in 2019, I moved to the USA. I lived in the USA for 4
             years and returned last year.
-
-             <!-- This diverse background has allowed me
-            to gain a broad perspective and strong technical skills. I have
-            studied programming languages such as C, Python, and JavaScript, as
-            well as Node.js, Vue, Nuxt, and Vite. I have hands-on experience
-            working with Node.js and Prisma, and I am also well-versed in major
-            database systems, including MySQL, MongoDB, and Postgres.
-            Additionally, I possess knowledge of JavaScript (ES6) and WebSocket,
-            which enables me to efficiently perform various backend development
-            tasks. My knowledge of technical English ensures clear communication
-            in technical documentation and within team collaboration. -->
           </p>
         </div>
       </div>
-      <div class="w-1/3 flex h-full">
-        <img src="/images/Banner.png" alt="Illustration" />
+      <div class="w-full md:w-1/3 flex h-full mt-8 md:mt-0">
+        <img
+          src="/images/Banner.png"
+          alt="Illustration"
+          class="w-full h-auto"
+        />
       </div>
     </div>
   </div>

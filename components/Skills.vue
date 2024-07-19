@@ -3,23 +3,23 @@
     <h2 class="text-3xl font-bold text-center mb-12">
       My <span class="font-extrabold">Skills</span>
     </h2>
-    <div class="w-full flex justify-between gap-4">
-      <div class="w-1/2 border border-stone-950 rounded-lg">
+    <div class="w-full flex flex-col md:flex-row justify-between gap-4">
+      <div class="w-full md:w-1/2 border border-stone-950 rounded-lg">
         <h2 class="text-3xl font-bold text-center my-12">Backend</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 p-5">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 p-5">
           <div
             v-for="item in backendItems"
             :key="item.title"
             class="bg-gray-100 p-4 rounded-lg shadow flex flex-col hover-scale border border-black"
             @mouseover="item.hovered = true"
             @mouseleave="item.hovered = false"
-          > 
+          >
             <div class="flex justify-center mx-auto flex-col w-24 p-2">
               <div class="flex">
                 <img
                   :src="item.hovered ? item.whiteImage : item.image"
                   :alt="item.title"
-                  class="max-md:mx-auto object-cover rounded-md"
+                  class="mx-auto object-cover rounded-md"
                 />
               </div>
               <h3
@@ -32,9 +32,9 @@
         </div>
       </div>
 
-     <div class="w-1/2 border border-stone-950 rounded-lg">
+      <div class="w-full md:w-1/2 border border-stone-950 rounded-lg">
         <h2 class="text-3xl font-bold text-center my-12">Frontend</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 p-5">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 p-5">
           <div
             v-for="item in frontendItems"
             :key="item.title"
@@ -47,7 +47,7 @@
                 <img
                   :src="item.hovered ? item.whiteImage : item.image"
                   :alt="item.title"
-                  class="max-md:mx-auto object-cover rounded-md"
+                  class="mx-auto object-cover rounded-md"
                 />
               </div>
               <h3

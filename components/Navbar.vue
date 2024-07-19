@@ -1,18 +1,12 @@
 <template>
   <header
-    class="container mx-auto flex justify-between items-center py-4 text-2xl"
+    class="container mx-auto flex flex-col justify-between items-center py-4 text-2xl"
   >
-    <nav class="flex items-center justify-between w-full">
+    <nav class="flex items-center justify-between w-full mb-4">
       <div class="flex items-center gap-2">
         <img src="/images/logo.png" alt="logo" />
         <h1 class="text-2xl text-pretty">Personal</h1>
       </div>
-      <ul class="flex justify-center gap-4 text-2xl flex-grow">
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact me</a></li>
-      </ul>
       <a
         href="https://drive.google.com/file/d/1mZzz4Tl8do-sxTVO79xhKWPbX2aXuUr8/view?usp=share_link"
       >
@@ -24,19 +18,20 @@
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
           >
-            <g fill="currentColor">
-              <path
-                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"
-              />
-              <path
-                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"
-              />
-            </g>
+            <path
+              fill="white"
+              d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z"
+            />
           </svg></button
       ></a>
     </nav>
+    <ul class="flex justify-center gap-4 text-2xl hidden md:flex">
+      <li><a href="#">About me</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">Contact me</a></li>
+    </ul>
   </header>
 </template>
 
@@ -45,13 +40,22 @@
 <style scoped>
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 nav {
   width: 100%;
 }
-ul {
-  margin: 0 auto;
+.hidden {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  ul {
+    margin: 0 auto;
+  }
 }
 </style>
